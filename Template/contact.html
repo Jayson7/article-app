@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+</head>
+
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="name"></label> Name<input required type="text" name="names">
+        <label for="message"></label> Message<input required type="text" name="messager">
+        <label for="number"> Phone number:</label><input required type="number" name="numbers">
+        <button>submit</button>
+    </form>
+</body>
+
+</html>
